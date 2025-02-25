@@ -1,0 +1,25 @@
+Problem 1:
+Write a Java program to find the second largest element in an array.
+
+Example:
+Input: [12, 35, 1, 10, 34, 1]
+Output: 34
+
+import java.util.Arrays;
+
+class Main {
+    public int Secondmax(int[] arr) {
+        if (arr.length < 2) {
+            throw new IllegalArgumentException("Array must have at least two elements");
+        }
+        
+        Arrays.sort(arr);
+        return arr[arr.length - 2]; // Second largest element
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        int[] arr = {12, 35, 1, 10, 34, 1};
+        System.out.println(obj.Secondmax(arr)); // Output: 34
+    }
+}
