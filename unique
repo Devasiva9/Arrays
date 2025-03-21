@@ -1,0 +1,22 @@
+import java.util.*;
+class Main {
+    public static List<Integer> DevaJava(List<Integer> list)
+    {
+        Set<Integer> seen = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
+        for(int num : list)
+        {
+            if(seen.add(num))
+            {
+                result.add(num);
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner deva = new Scanner(System.in);
+        List<Integer> list = Arrays.asList(4, 2, 4, 3, 2, 1, 5, 3, 6, 1);
+        List<Integer> x = DevaJava(list);
+        System.out.println(x);
+    }
+}
